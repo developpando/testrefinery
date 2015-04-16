@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -55,3 +56,5 @@ gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
 
 # Add support for Refinery's custom fork of the visual editor WYMeditor.
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
+
+gem 'refinerycms-events', path: 'vendor/extensions'
