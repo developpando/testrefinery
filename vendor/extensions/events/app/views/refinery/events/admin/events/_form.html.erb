@@ -22,6 +22,12 @@
                :toggle_image_display => false -%>
   </div>
 
+  <div class="field">
+    <%= f.label :event_type -%>
+    
+    <%= f.select(:event_type_id, @event_types.collect {|d| [d.name, d.id] })%>
+  </div>
+
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,

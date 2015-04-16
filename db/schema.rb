@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150416211432) do
+ActiveRecord::Schema.define(version: 20150416211721) do
 
   create_table "refinery_events", force: :cascade do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150416211432) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "event_type_id"
   end
 
   create_table "refinery_events_event_types", force: :cascade do |t|
