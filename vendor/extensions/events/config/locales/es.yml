@@ -1,11 +1,27 @@
 es:
   refinery:
     plugins:
+      event_types:
+        title: Event Types
       events:
         title: Events
-#        article: masculino/femenino
     events:
       admin:
+        event_types:
+          actions:
+            create_new: Crear nuevo event type
+            reorder: Reordenar event types
+            reorder_done: Reordenación de event types completada
+          records:
+            title: Event Types
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay event types todavía. Pulsa en "Crear nuevo Event
+              Type" para crear tu primer event type.
+          event_type:
+            view_live_html: Ver este event type como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este event type
+            delete: Borrar este event type para siempre
         events:
           actions:
             create_new: Crear nuevo event
@@ -14,17 +30,24 @@ es:
           records:
             title: Events
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay events todavía. Pulsa en "Crear nuevo Event" para crear tu primer event.
+            no_items_yet: No hay events todavía. Pulsa en "Crear nuevo Event" para
+              crear tu primer event.
           event:
-            view_live_html: Ver este event como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este event como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
             edit: Editar este event
             delete: Borrar este event para siempre
+      event_types:
+        show:
+          other: Otros event types
       events:
         show:
           other: Otros events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/event_type:
+        name: Name
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

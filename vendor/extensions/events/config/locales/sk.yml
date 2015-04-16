@@ -1,10 +1,27 @@
 sk:
   refinery:
     plugins:
+      event_types:
+        title: Event Types
       events:
         title: Events
     events:
       admin:
+        event_types:
+          actions:
+            create_new: Pridať Event Type
+            reorder: Preusporiadať Event Types
+            reorder_done: Koniec radenia Event Types
+          records:
+            title: Event Types
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Event Types. Kliknite na "Pridať
+              Event Type" pre pridanie prvého event type.
+          event_type:
+            view_live_html: Zobraziť náhľad event type<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť event type
+            delete: Zmazať event type
         events:
           actions:
             create_new: Pridať Event
@@ -12,18 +29,24 @@ sk:
             reorder_done: Koniec radenia Events
           records:
             title: Events
-            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
-            no_items_yet: Nie sú vytvorené žiadne Events. Kliknite na "Pridať Event" pre pridanie prvého event.
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Events. Kliknite na "Pridať Event"
+              pre pridanie prvého event.
           event:
             view_live_html: Zobraziť náhľad event<br/><em>(otvorí sa v novom okne)</em>
             edit: Upraviť event
             delete: Zmazať event
+      event_types:
+        show:
+          other: Daľšie Event Types
       events:
         show:
           other: Daľšie Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/event_type:
+        name: Name
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

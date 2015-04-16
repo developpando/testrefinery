@@ -1,10 +1,27 @@
 nl:
   refinery:
     plugins:
+      event_types:
+        title: Event Types
       events:
         title: Events
     events:
       admin:
+        event_types:
+          actions:
+            create_new: Nieuwe Event Type toevoegen
+            reorder: De volgorde van de Event Types wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Event Type-volgorde
+          records:
+            title: Event Types
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Event Types. Druk op 'Nieuwe Event Type
+              toevoegen' om de eerste toe te voegen.
+          event_type:
+            view_live_html: Deze event type op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze event type
+            delete: Deze event type definitief verwijderen
         events:
           actions:
             create_new: Nieuwe Event toevoegen
@@ -13,17 +30,24 @@ nl:
           records:
             title: Events
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Events. Druk op 'Nieuwe Event toevoegen' om de eerste toe te voegen.
+            no_items_yet: Er zijn nog geen Events. Druk op 'Nieuwe Event toevoegen'
+              om de eerste toe te voegen.
           event:
-            view_live_html: Deze event op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            view_live_html: Deze event op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
             edit: Bewerk deze event
             delete: Deze event definitief verwijderen
+      event_types:
+        show:
+          other: Andere Event Types
       events:
         show:
           other: Andere Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/event_type:
+        name: Name
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

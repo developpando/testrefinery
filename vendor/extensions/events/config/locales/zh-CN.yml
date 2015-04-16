@@ -1,31 +1,49 @@
 zh-CN:
   refinery:
     plugins:
+      event_types:
+        title: Event Types
       events:
         title: Events
     events:
       admin:
+        event_types:
+          actions:
+            create_new: "建立新的 Event Type"
+            reorder: "对 Event Types 重新排序"
+            reorder_done: "对 Event Types 的重新排序结束"
+          records:
+            title: Event Types
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Event Types . 点击 "Add New Event Type" 创建一个event type.
+          event_type:
+            view_live_html: "查看 event type 的最新内容.<br/><em>(新窗口中打开)</em>"
+            edit: "编辑 event type"
+            delete: "永久删除 event type"
         events:
           actions:
-            create_new: 建立新的 Event
-            reorder: 对 Events 重新排序
-            reorder_done: 对 Events 的重新排序结束
+            create_new: "建立新的 Event"
+            reorder: "对 Events 重新排序"
+            reorder_done: "对 Events 的重新排序结束"
           records:
             title: Events
-            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
-
-            # There are no Events yet. Click "Add New Event" to add your first event.
+            sorry_no_results: "对不起，未找到结果。"
             no_items_yet: 目前没有 Events . 点击 "Add New Event" 创建一个event.
           event:
-            view_live_html: 查看 event 的最新内容.<br/><em>(新窗口中打开)</em>
-            edit: 编辑 event
-            delete: 永久删除 event
+            view_live_html: "查看 event 的最新内容.<br/><em>(新窗口中打开)</em>"
+            edit: "编辑 event"
+            delete: "永久删除 event"
+      event_types:
+        show:
+          other: "其他 Event Types"
       events:
         show:
-          other: 其他 Events
+          other: "其他 Events"
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/event_type:
+        name: Name
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

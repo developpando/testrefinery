@@ -1,10 +1,26 @@
 en:
   refinery:
     plugins:
+      event_types:
+        title: Event Types
       events:
         title: Events
     events:
       admin:
+        event_types:
+          actions:
+            create_new: Add New Event Type
+            reorder: Reorder Event Types
+            reorder_done: Done Reordering Event Types
+          records:
+            title: Event Types
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Event Types yet. Click "Add New Event Type"
+              to add your first event type.
+          event_type:
+            view_live_html: View this event type live <br/><em>(opens in a new window)</em>
+            edit: Edit this event type
+            delete: Remove this event type forever
         events:
           actions:
             create_new: Add New Event
@@ -13,17 +29,23 @@ en:
           records:
             title: Events
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Events yet. Click "Add New Event" to add your first event.
+            no_items_yet: There are no Events yet. Click "Add New Event" to add your
+              first event.
           event:
             view_live_html: View this event live <br/><em>(opens in a new window)</em>
             edit: Edit this event
             delete: Remove this event forever
+      event_types:
+        show:
+          other: Other Event Types
       events:
         show:
           other: Other Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/event_type:
+        name: Name
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo
